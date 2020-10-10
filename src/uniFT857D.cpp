@@ -1,4 +1,5 @@
 #include "Arduino.h"
+#include "SomeSerial.h"
 #include "uniFT857D.h"
 
 // function work vars, must be static & volatile?
@@ -14,8 +15,10 @@ static FuncPtrLong longf[1];
  * default mode for the radio: 9600 @ 8N2
  */
 void uniFT857D::begin() {
-    Serial.begin(9600, SERIAL_8N2);
-    Serial.flush();
+//    Serial.begin(9600, SERIAL_8N2);
+//    Serial.flush();
+    SomeSerial.begin(9600, SERIAL_8N2);
+    SomeSerial.flush();
 }
 
 // Alternative initializer with a custom baudrate and mode
@@ -27,8 +30,10 @@ void uniFT857D::begin(long br, int mode) {
      *  SERIAL_5E2; SERIAL_6E2; SERIAL_7E2; SERIAL_8E2; SERIAL_5O1; SERIAL_6O1;
      *  SERIAL_7O1; SERIAL_8O1; SERIAL_5O2; SERIAL_6O2; SERIAL_7O2; SERIAL_8O2
      */
-    Serial.begin(br, mode);
-    Serial.flush();
+//    Serial.begin(br, mode);
+//    Serial.flush();
+    SomeSerial.begin(br, mode);
+    SomeSerial.flush();
 }
 
 /*
