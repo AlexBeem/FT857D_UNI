@@ -3,6 +3,9 @@
 
 #include "Arduino.h"
 
+#include <SomeSerial.h>
+#include <Stream.h>
+
 /*
  * CAT Command definition from VE3BUX library and more
  * We will comment the ones we don't use for code efficiency & refference
