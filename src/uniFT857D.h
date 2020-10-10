@@ -71,6 +71,8 @@ typedef void (*FuncPtrLong)(long);
  */
 class uniFT857D {
  public:
+    uniFT857D(SomeSerial *serial);
+ 
     // we have two kind of constructors here
     void begin(); // default for the radio 9600 @ 8N2
     void begin(long baudrate, int mode); // custom baudrate and mode
@@ -87,6 +89,7 @@ class uniFT857D {
     boolean enabled     = true;
 
  private:
+    SomeSerial *serial;
     byte nullPad[5]     = {0,0,0,0,0};
     long freq           = 0;
     byte ACK            = 0;
