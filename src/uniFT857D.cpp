@@ -1,6 +1,11 @@
 #include "Arduino.h"
-#include "SomeSerial.h"
 #include "uniFT857D.h"
+
+
+uniFT857D::uniFT857D(SomeSerial *serial)
+{   this->serial = serial;
+	//this->serial->begin(9600);
+}
 
 // function work vars, must be static & volatile?
 static FuncPtrVoid empty[1];
