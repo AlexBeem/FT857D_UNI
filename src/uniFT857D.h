@@ -2,7 +2,6 @@
 #define uniFT857D_h
 
 #include "Arduino.h"
-
 #include <SomeSerial.h>
 #include <Stream.h>
 
